@@ -1,0 +1,35 @@
+@model StudentEntryForm.Models.Studentt
+
+@{
+    ViewBag.Title = "Student Entry";
+}
+
+<h2>Student Entry</h2>
+
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td><label>First Name</label></td>
+        <td>@Html.TextBoxFor(m => m.FirstName)</td>
+    </tr>
+    <tr>
+        <td><label>Last Name</label></td>
+        <td>@Html.TextBoxFor(m => m.LastName)</td>
+    </tr>
+    <tr>
+        <td><label>Grade</label></td>
+        <td>@Html.TextBoxFor(m => m.Grade)</td>
+    </tr>
+    <tr>
+        <td><label>School Name</label></td>
+        <td>@Html.TextBoxFor(m => m.SchoolName)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="Submit" /></td>
+    </tr>
+</table>
+
+<p style="color:green">@ViewBag.Message</p>
+}
